@@ -65,8 +65,8 @@ class BestellingTest {
     }
 
     @Test
-    void throws_on_bestelling_verzameling_id_onder_1(){
-        assertThrows(IllegalArgumentException.class, () -> bestelling.setBestellingVerzamelingId(0));
+    void throws_on_bestelling_verzameling_id_onder_0(){
+        assertThrows(IllegalArgumentException.class, () -> bestelling.setBestellingVerzamelingId(-1));
     }
 
     @Test

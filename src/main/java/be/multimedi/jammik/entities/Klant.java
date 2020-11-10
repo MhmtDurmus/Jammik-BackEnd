@@ -115,8 +115,8 @@ public class Klant {
     }
 
     public void setWachtwoord(String wachtwoord) {
-//        if (wachtwoord == null || wachtwoord.length() != 60)
-//            throw new IllegalArgumentException("wachtwoord mag niet null of moet 60 characters lang zijn");
+        if (wachtwoord == null || wachtwoord.length() != 60)
+            throw new IllegalArgumentException("wachtwoord mag niet null of moet 60 characters lang zijn");
         this.wachtwoord = wachtwoord;
     }
 

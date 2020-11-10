@@ -56,7 +56,7 @@ public class ZaakController {
 
     @GetMapping(value = "{email}")
     public ResponseEntity<List<Zaak>> getZakenOpUitbater(@PathVariable("email") String email) {
-        return ResponseEntity.ok(Objects.requireNonNull(repository.findZaaksByEmail(email).orElse(null)));
+        return ResponseEntity.ok(repository.findZaaksByEmail(email).orElse(null));
     }
 
     @GetMapping(value = "/display/{email}")
